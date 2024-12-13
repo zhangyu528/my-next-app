@@ -7,8 +7,7 @@ export const navStyles = {
   button: "px-6 py-3 h-12 bg-white text-black rounded-lg hover:bg-gray-200 transition-colors flex items-center font-semibold text-[16px]"
 } as const;
 
-// 可以添加其他相关样式
 export const defaultNavItems = [
-  { label: "Log in", href: "/login" },
+  { label: "Log in", href: "/login", isButton: false },
   { label: "Get started for free", href: "/signup", isButton: true }
 ] as const; 
