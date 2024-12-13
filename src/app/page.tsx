@@ -9,7 +9,7 @@ export default function Home() {
 
   return (
     <div className={pageStyles.wrapper}>
-      <Navbar logo="Your Logo" />
+      <Navbar />
       
       <main className={pageStyles.main}>
         {/* Hero 区域 */}

@@ -7,7 +7,7 @@ import SignupModal from '../SignupModal';
 import { NavItem, NavbarProps } from './types';
 
 export default function Navbar({ 
-  logo = "Cursor",
+  logo = "Next App",
   items = defaultNavItems
 }) {
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
