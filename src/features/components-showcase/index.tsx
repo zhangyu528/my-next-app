@@ -1,15 +1,10 @@
 'use client';
 
 import ArrowButton from '@/components/base/ArrowButton';
-import { useState } from 'react';
-import LoginModal from '@/components/LoginModal';
-import SignupModal from '@/components/SignupModal';
+import Button from '@/components/base/Button';
 import { componentPageStyles } from './styles';
 
 export default function ComponentsShowcase() {
-  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
-  const [isSignupModalOpen, setIsSignupModalOpen] = useState(false);
-
   return (
     <div className={componentPageStyles.wrapper}>
       <h1 className={componentPageStyles.title}>Components Showcase</h1>
@@ -17,54 +12,38 @@ export default function ComponentsShowcase() {
       {/* Buttons Section */}
       <section className={componentPageStyles.section}>
         <h2 className={componentPageStyles.sectionTitle}>Buttons</h2>
-        <div className="space-y-4">
-          {/* Login Button */}
-          <div>
-            <h3 className={componentPageStyles.componentTitle}>Login Button:</h3>
-            <div className={componentPageStyles.componentWrapper}>
-              <ArrowButton 
-                onClick={() => setIsLoginModalOpen(true)}
-                variant="outline"
-              >
-                Log in
-              </ArrowButton>
-            </div>
+        
+        {/* Basic Buttons */}
+        <div className="mb-8">
+          <h3 className={componentPageStyles.componentTitle}>Basic Buttons:</h3>
+          <div className="flex gap-4">
+            <Button variant="default">Default Button</Button>
+            <Button variant="primary">Primary Button</Button>
+            <Button variant="outline">Outline Button</Button>
           </div>
+        </div>
 
-          {/* Signup Button */}
-          <div>
-            <h3 className={componentPageStyles.componentTitle}>Signup Button:</h3>
-            <div className={componentPageStyles.componentWrapper}>
-              <ArrowButton 
-                onClick={() => setIsSignupModalOpen(true)}
-                variant="default"
-              >
-                Get started for free
-              </ArrowButton>
-            </div>
+        {/* Arrow Buttons */}
+        <div className="space-y-4">
+          <h3 className={componentPageStyles.componentTitle}>Arrow Buttons:</h3>
+          <div className="flex gap-4">
+            <ArrowButton variant="default">Default Arrow</ArrowButton>
+            <ArrowButton variant="primary">Primary Arrow</ArrowButton>
+            <ArrowButton variant="outline">Outline Arrow</ArrowButton>
           </div>
         </div>
       </section>
-
-      {/* Modals */}
-      <LoginModal 
-        isOpen={isLoginModalOpen} 
-        onClose={() => setIsLoginModalOpen(false)} 
-      />
-      <SignupModal 
-        isOpen={isSignupModalOpen} 
-        onClose={() => setIsSignupModalOpen(false)} 
-      />
 
       {/* Component Information */}
       <section className={componentPageStyles.infoSection}>
         <h2 className={componentPageStyles.sectionTitle}>Component Information</h2>
         <div className={componentPageStyles.infoCard}>
-          <h3 className="text-lg font-medium mb-2">Button Interactions:</h3>
+          <h3 className="text-lg font-medium mb-2">Button Features:</h3>
           <ul className={componentPageStyles.infoList}>
-            <li>Hover on buttons to see text movement effect</li>
-            <li>Click buttons to trigger respective modals</li>
-            <li>Test modal close functionality</li>
+            <li>Basic Buttons: Three variants (default, primary, outline)</li>
+            <li>Arrow Buttons: Adds arrow animation and rounded corners transition</li>
+            <li>Hover Effects: Color transitions, border changes</li>
+            <li>Interactive Elements: Click handlers and modal triggers</li>
           </ul>
         </div>
       </section>
