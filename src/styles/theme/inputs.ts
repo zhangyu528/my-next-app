@@ -1,8 +1,38 @@
 export const inputStyles = {
+  base: "appearance-none outline-none",
   variants: {
-    default: "w-full px-4 py-2 bg-gray-800 rounded-lg border border-gray-700 focus:outline-none focus:border-blue-500 text-white placeholder-gray-400",
-    search: "w-full px-4 py-2 bg-gray-800/50 rounded-lg border border-gray-700 focus:outline-none focus:border-blue-500 text-white placeholder-gray-400",
-    minimal: "w-full px-4 py-2 bg-transparent border-b border-gray-700 focus:outline-none focus:border-blue-500 text-white placeholder-gray-400"
+    default: [
+      "w-full px-4 py-2",
+      "bg-gray-800",
+      "rounded-lg",
+      "border border-gray-700",
+      "text-white placeholder-gray-400",
+      "[&:hover]:!border-blue-500",
+      "transition-[border-color]",
+      "duration-200",
+      "ease-in-out"
+    ].join(" "),
+    search: [
+      "w-full px-4 py-2",
+      "bg-gray-800/50",
+      "rounded-lg",
+      "border border-gray-700",
+      "text-white placeholder-gray-400",
+      "[&:hover]:!border-blue-500",
+      "transition-[border-color]",
+      "duration-200",
+      "ease-in-out"
+    ].join(" "),
+    minimal: [
+      "w-full px-4 py-2",
+      "bg-transparent",
+      "border-b border-gray-700",
+      "text-white placeholder-gray-400",
+      "[&:hover]:!border-blue-500",
+      "transition-[border-color]",
+      "duration-200",
+      "ease-in-out"
+    ].join(" ")
   },
   sizes: {
     sm: "h-9 text-sm",
@@ -10,8 +40,18 @@ export const inputStyles = {
     lg: "h-14 text-lg"
   },
   states: {
-    error: "border-red-500 focus:border-red-500",
-    success: "border-green-500 focus:border-green-500",
+    error: [
+      "border-red-500",
+      "hover:border-red-400",
+      "transition-[border-color]",
+      "duration-200"
+    ].join(" "),
+    success: [
+      "border-green-500",
+      "hover:border-green-400",
+      "transition-[border-color]",
+      "duration-200"
+    ].join(" "),
     disabled: "opacity-50 cursor-not-allowed"
   },
   wrapper: {

@@ -50,7 +50,7 @@ export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
           <div className="w-full">
             <ArrowButton 
               onClick={() => {/* 登录逻辑 */}} 
-              variant="primary"
+              styleType="primary"
             >
               Log in
             </ArrowButton>

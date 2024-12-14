@@ -18,101 +18,107 @@ export default function ComponentsShowcase() {
         <div className="mb-8">
           <h3 className={componentPageStyles.componentTitle}>Basic Buttons:</h3>
           <div className="flex gap-4">
-            <Button variant="default">Default Button</Button>
-            <Button variant="primary">Primary Button</Button>
-            <Button variant="outline">Outline Button</Button>
+            <Button styleType="default">Default Button</Button>
+            <Button styleType="primary">Primary Button</Button>
+            <Button styleType="outline">Outline Button</Button>
           </div>
         </div>
 
-        {/* Arrow Buttons */}
-        <div className="space-y-4">
-          <h3 className={componentPageStyles.componentTitle}>Arrow Buttons:</h3>
-          <div className="flex gap-4">
-            <ArrowButton variant="default">Default Arrow</ArrowButton>
-            <ArrowButton variant="primary">Primary Arrow</ArrowButton>
-            <ArrowButton variant="outline">Outline Arrow</ArrowButton>
+          {/* Arrow Buttons */}
+          <div className="space-y-4">
+            <h3 className={componentPageStyles.componentTitle}>Arrow Buttons:</h3>
+            <div className="flex gap-4">
+              <ArrowButton styleType="default">
+                Default Arrow
+              </ArrowButton>
+              <ArrowButton styleType="primary">
+                Primary Arrow
+              </ArrowButton>
+              <ArrowButton styleType="outline">
+                Outline Arrow
+              </ArrowButton>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Inputs Section */}
-      <section className={componentPageStyles.section}>
-        <h2 className={componentPageStyles.sectionTitle}>Inputs</h2>
-        
-        {/* Input Variants */}
-        <div className="mb-8">
-          <h3 className={componentPageStyles.componentTitle}>Input Variants:</h3>
-          <div className="space-y-4 max-w-md">
-            <Input 
-              variant="default" 
-              placeholder="Default Input"
-            />
-            <Input 
-              variant="search" 
-              placeholder="Search Input"
-            />
-            <Input 
-              variant="minimal" 
-              placeholder="Minimal Input"
-            />
+        {/* Inputs Section */}
+        <section className={componentPageStyles.section}>
+          <h2 className={componentPageStyles.sectionTitle}>Inputs</h2>
+          
+          {/* Input Variants */}
+          <div className="mb-8">
+            <h3 className={componentPageStyles.componentTitle}>Input Variants:</h3>
+            <div className="space-y-4 max-w-md [&>*]:!border-inherit">
+              <Input 
+                variant="default" 
+                placeholder="Default Input"
+              />
+              <Input 
+                variant="search" 
+                placeholder="Search Input"
+              />
+              <Input 
+                variant="minimal" 
+                placeholder="Minimal Input"
+              />
+            </div>
           </div>
-        </div>
 
-        {/* Input Sizes */}
-        <div className="mb-8">
-          <h3 className={componentPageStyles.componentTitle}>Input Sizes:</h3>
-          <div className="space-y-4 max-w-md">
-            <Input 
-              size="sm" 
-              placeholder="Small Input"
-            />
-            <Input 
-              size="md" 
-              placeholder="Medium Input"
-            />
-            <Input 
-              size="lg" 
-              placeholder="Large Input"
-            />
+          {/* Input Sizes */}
+          <div className="mb-8">
+            <h3 className={componentPageStyles.componentTitle}>Input Sizes:</h3>
+            <div className="space-y-4 max-w-md">
+              <Input 
+                sizeVariant="sm" 
+                placeholder="Small Input"
+              />
+              <Input 
+                sizeVariant="md" 
+                placeholder="Medium Input"
+              />
+              <Input 
+                sizeVariant="lg" 
+                placeholder="Large Input"
+              />
+            </div>
           </div>
-        </div>
 
-        {/* Input States */}
-        <div className="mb-8">
-          <h3 className={componentPageStyles.componentTitle}>Input States:</h3>
-          <div className="space-y-4 max-w-md">
-            <Input 
-              placeholder="Normal Input"
-            />
-            <Input 
-              error 
-              placeholder="Error Input"
-            />
-            <Input 
-              success 
-              placeholder="Success Input"
-            />
-            <Input 
-              disabled 
-              placeholder="Disabled Input"
-            />
+          {/* Input States */}
+          <div className="mb-8">
+            <h3 className={componentPageStyles.componentTitle}>Input States:</h3>
+            <div className="space-y-4 max-w-md">
+              <Input 
+                placeholder="Normal Input"
+              />
+              <Input 
+                error 
+                placeholder="Error Input"
+              />
+              <Input 
+                success 
+                placeholder="Success Input"
+              />
+              <Input 
+                disabled 
+                placeholder="Disabled Input"
+              />
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Component Information */}
-      <section className={componentPageStyles.infoSection}>
-        <h2 className={componentPageStyles.sectionTitle}>Component Information</h2>
-        <div className={componentPageStyles.infoCard}>
-          <h3 className="text-lg font-medium mb-2">Features:</h3>
-          <ul className={componentPageStyles.infoList}>
-            <li>Buttons: Three variants with arrow animation option</li>
-            <li>Inputs: Multiple variants, sizes and states</li>
-            <li>Hover Effects: Color transitions, animations</li>
-            <li>State Management: Error, success, and disabled states</li>
-          </ul>
-        </div>
-      </section>
-    </div>
+        {/* Component Information */}
+        <section className={componentPageStyles.infoSection}>
+          <h2 className={componentPageStyles.sectionTitle}>Component Information</h2>
+          <div className={componentPageStyles.infoCard}>
+            <h3 className="text-lg font-medium mb-2">Features:</h3>
+            <ul className={componentPageStyles.infoList}>
+              <li>Buttons: Three variants with arrow animation option</li>
+              <li>Inputs: Multiple variants, sizes and states</li>
+              <li>Hover Effects: Color transitions, animations</li>
+              <li>State Management: Error, success, and disabled states</li>
+            </ul>
+          </div>
+        </section>
+      </div>
   );
 } 

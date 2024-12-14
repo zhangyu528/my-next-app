@@ -1,5 +1,5 @@
 export const componentPageStyles = {
-  wrapper: "min-h-screen bg-gradient-to-b from-black to-gray-900 text-white p-8",
+  wrapper: "min-h-screen bg-[var(--background)] text-[var(--foreground)] p-8",
   title: "text-3xl font-bold mb-8",
   section: "mb-12",
   sectionTitle: "text-2xl font-semibold mb-4",

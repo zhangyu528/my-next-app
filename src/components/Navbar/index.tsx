@@ -20,13 +20,13 @@ export default function Navbar({
           <div className={navStyles.itemsWrapper}>
             <ArrowButton 
               onClick={() => setIsLoginModalOpen(true)} 
-              variant="outline"
+              styleType="outline"
             >
               Log in
             </ArrowButton>
             <ArrowButton 
               onClick={() => setIsSignupModalOpen(true)}
-              variant="default"
+              styleType="default"
             >
               Get started for free
             </ArrowButton>
