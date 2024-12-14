@@ -1,5 +1,7 @@
 'use client';
 
+import { signupButtonStyles } from './styles';
+
 interface SignupButtonProps {
   onClick: () => void;
 }
@@ -12,9 +14,9 @@ export default function SignupButton({ onClick }: SignupButtonProps) {
         e.preventDefault();
         onClick();
       }}
-      className="px-6 py-3 h-12 bg-white text-black rounded-lg flex items-center font-semibold text-[16px]"
+      className={signupButtonStyles.button}
     >
-      <span className="inline-block transition-all duration-300 hover:pl-2">
+      <span className={signupButtonStyles.label}>
         Get started for free
       </span>
     </a>
