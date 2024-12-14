@@ -4,8 +4,7 @@ import { useState } from 'react';
 import { navStyles } from './styles';
 import LoginModal from '../LoginModal';
 import SignupModal from '../SignupModal';
-import LoginButton from '../LoginButton';
-import SignupButton from '../SignupButton';
+import ArrowButton from '@/components/base/ArrowButton';
 
 export default function Navbar({ 
   logo = "Next App"
@@ -19,8 +18,18 @@ export default function Navbar({
         <div className={navStyles.container}>
           <div className={navStyles.logo}>{logo}</div>
           <div className={navStyles.itemsWrapper}>
-            <LoginButton onClick={() => setIsLoginModalOpen(true)} />
-            <SignupButton onClick={() => setIsSignupModalOpen(true)} />
+            <ArrowButton 
+              onClick={() => setIsLoginModalOpen(true)} 
+              variant="outline"
+            >
+              Log in
+            </ArrowButton>
+            <ArrowButton 
+              onClick={() => setIsSignupModalOpen(true)}
+              variant="default"
+            >
+              Get started for free
+            </ArrowButton>
           </div>
         </div>
       </nav>

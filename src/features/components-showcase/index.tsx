@@ -1,7 +1,6 @@
 'use client';
 
-import LoginButton from '@/components/LoginButton';
-import SignupButton from '@/components/SignupButton';
+import ArrowButton from '@/components/base/ArrowButton';
 import { useState } from 'react';
 import LoginModal from '@/components/LoginModal';
 import SignupModal from '@/components/SignupModal';
@@ -23,7 +22,12 @@ export default function ComponentsShowcase() {
           <div>
             <h3 className={componentPageStyles.componentTitle}>Login Button:</h3>
             <div className={componentPageStyles.componentWrapper}>
-              <LoginButton onClick={() => setIsLoginModalOpen(true)} />
+              <ArrowButton 
+                onClick={() => setIsLoginModalOpen(true)}
+                variant="outline"
+              >
+                Log in
+              </ArrowButton>
             </div>
           </div>
 
@@ -31,7 +35,12 @@ export default function ComponentsShowcase() {
           <div>
             <h3 className={componentPageStyles.componentTitle}>Signup Button:</h3>
             <div className={componentPageStyles.componentWrapper}>
-              <SignupButton onClick={() => setIsSignupModalOpen(true)} />
+              <ArrowButton 
+                onClick={() => setIsSignupModalOpen(true)}
+                variant="default"
+              >
+                Get started for free
+              </ArrowButton>
             </div>
           </div>
         </div>

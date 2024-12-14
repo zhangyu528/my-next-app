@@ -3,7 +3,7 @@
 import { modalStyles } from './styles';
 import { LoginModalProps } from './types';
 import GithubIcon from '../icons/GithubIcon';
-import LoginButton from '../LoginButton';
+import ArrowButton from '@/components/base/ArrowButton';
 
 export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
   if (!isOpen) return null;
@@ -48,7 +48,12 @@ export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
           </div>
           
           <div className="w-full">
-            <LoginButton onClick={() => {/* 登录逻辑 */}} variant="primary" />
+            <ArrowButton 
+              onClick={() => {/* 登录逻辑 */}} 
+              variant="primary"
+            >
+              Log in
+            </ArrowButton>
           </div>
         </form>
       </div>
