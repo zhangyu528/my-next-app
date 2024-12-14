@@ -2,7 +2,7 @@
 
 import Button from '../Button';
 import ArrowIcon from '@/components/icons/ArrowIcon';
-import { buttonStyles } from '@/styles/buttons';
+import { buttonStyles } from '@/styles/theme/buttons';
 import { ArrowButtonProps } from './types';
 
 export default function ArrowButton({ 
@@ -16,7 +16,7 @@ export default function ArrowButton({
     <Button
       onClick={onClick}
       variant={variant}
-      className={`relative overflow-hidden ${className}`}
+      className={`relative overflow-hidden hover:rounded-none transition-[border-radius] duration-300 ${className}`}
       {...props}
     >
       <span className={buttonStyles.components.label}>

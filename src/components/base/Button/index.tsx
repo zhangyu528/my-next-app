@@ -1,6 +1,6 @@
 'use client';
 
-import { buttonStyles } from '@/styles/buttons';
+import { buttonStyles } from '@/styles/theme/buttons';
 import { ButtonProps } from './types';
 
 export default function Button({ 
