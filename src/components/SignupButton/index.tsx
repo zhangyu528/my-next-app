@@ -1,6 +1,7 @@
 'use client';
 
 import { signupButtonStyles } from './styles';
+import ArrowIcon from '../icons/ArrowIcon';
 
 interface SignupButtonProps {
   onClick: () => void;
@@ -17,6 +18,9 @@ export default function SignupButton({ onClick }: SignupButtonProps) {
       className={signupButtonStyles.button}
     >
       <span className={signupButtonStyles.label}>
+        <span className={signupButtonStyles.icon}>
+          <ArrowIcon />
+        </span>
         Get started for free
       </span>
     </a>
