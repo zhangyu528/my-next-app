@@ -1,27 +1,17 @@
 'use client';
 
 import { useState } from 'react';
-import { navStyles, defaultNavItems } from './styles';
+import { navStyles } from './styles';
 import LoginModal from '../LoginModal';
 import SignupModal from '../SignupModal';
-import { NavItem, NavbarProps } from './types';
+import LoginButton from '../LoginButton';
+import SignupButton from '../SignupButton';
 
 export default function Navbar({ 
-  logo = "Next App",
-  items = defaultNavItems
+  logo = "Next App"
 }) {
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const [isSignupModalOpen, setIsSignupModalOpen] = useState(false);
-
-  const handleItemClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    if (href === '/login') {
-      e.preventDefault();
-      setIsLoginModalOpen(true);
-    } else if (href === '/signup') {
-      e.preventDefault();
-      setIsSignupModalOpen(true);
-    }
-  };
 
   return (
     <>
@@ -29,16 +19,8 @@ export default function Navbar({
         <div className={navStyles.container}>
           <div className={navStyles.logo}>{logo}</div>
           <div className={navStyles.itemsWrapper}>
-            {items.map((item, index) => (
-              <a
-                key={index}
-                href={item.href}
-                onClick={(e) => handleItemClick(e, item.href)}
-                className={item.isButton ? navStyles.button : navStyles.link}
-              >
-                {item.label}
-              </a>
-            ))}
+            <LoginButton onClick={() => setIsLoginModalOpen(true)} />
+            <SignupButton onClick={() => setIsSignupModalOpen(true)} />
           </div>
         </div>
       </nav>

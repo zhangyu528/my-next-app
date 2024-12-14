@@ -3,11 +3,9 @@ export const navStyles = {
   container: "max-w-6xl mx-auto flex justify-between items-center",
   logo: "text-2xl font-bold",
   itemsWrapper: "flex items-center gap-4",
-  link: "hover:text-gray-300 px-6 py-3 h-12 border border-gray-700 rounded-lg transition-colors flex items-center font-semibold text-[16px]",
-  button: "px-6 py-3 h-12 bg-white text-black rounded-lg hover:bg-gray-200 transition-colors flex items-center font-semibold text-[16px]"
 } as const;
 
 export const defaultNavItems = [
   { label: "Log in", href: "/login", isButton: false },
   { label: "Get started for free", href: "/signup", isButton: true }
-] as const; 
+] as const;
