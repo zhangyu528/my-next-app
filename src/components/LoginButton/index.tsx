@@ -1,5 +1,7 @@
 'use client';
 
+import { loginButtonStyles } from './styles';
+
 interface LoginButtonProps {
   onClick: () => void;
 }
@@ -12,9 +14,9 @@ export default function LoginButton({ onClick }: LoginButtonProps) {
         e.preventDefault();
         onClick();
       }}
-      className="px-6 py-3 h-12 border border-gray-700 rounded-lg flex items-center font-semibold text-[16px]"
+      className={loginButtonStyles.button}
     >
-      <span className="inline-block transition-all duration-300 hover:pl-2">
+      <span className={loginButtonStyles.label}>
         Log in
       </span>
     </a>
