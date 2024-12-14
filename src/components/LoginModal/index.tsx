@@ -2,6 +2,8 @@
 
 import { modalStyles } from './styles';
 import { LoginModalProps } from './types';
+import GithubIcon from '../icons/GithubIcon';
+import LoginButton from '../LoginButton';
 
 export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
   if (!isOpen) return null;
@@ -16,31 +18,38 @@ export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
           ✕
         </button>
         
-        <h2 className={modalStyles.title}>Log in to your account</h2>
+        <button 
+          className={modalStyles.githubButton}
+          onClick={() => {/* GitHub OAuth 逻辑 */}}
+        >
+          <GithubIcon />
+          Continue with GitHub
+        </button>
+
+        <div className={modalStyles.divider}>
+          <span>or</span>
+        </div>
         
         <form className={modalStyles.form} onSubmit={(e) => e.preventDefault()}>
           <div>
-            <label className={modalStyles.formGroup.label}>Email</label>
             <input 
               type="email" 
+              placeholder="Email"
               className={modalStyles.formGroup.input}
             />
           </div>
           
           <div>
-            <label className={modalStyles.formGroup.label}>Password</label>
             <input 
               type="password" 
+              placeholder="Password"
               className={modalStyles.formGroup.input}
             />
           </div>
           
-          <button 
-            type="submit"
-            className={modalStyles.submitButton}
-          >
-            Log in
-          </button>
+          <div className="w-full">
+            <LoginButton onClick={() => {/* 登录逻辑 */}} variant="primary" />
+          </div>
         </form>
       </div>
     </div>

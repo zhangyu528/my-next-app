@@ -5,9 +5,10 @@ import ArrowIcon from '../icons/ArrowIcon';
 
 interface LoginButtonProps {
   onClick: () => void;
+  variant?: 'default' | 'primary';
 }
 
-export default function LoginButton({ onClick }: LoginButtonProps) {
+export default function LoginButton({ onClick, variant = 'default' }: LoginButtonProps) {
   return (
     <a
       href="/login"
@@ -15,7 +16,7 @@ export default function LoginButton({ onClick }: LoginButtonProps) {
         e.preventDefault();
         onClick();
       }}
-      className={loginButtonStyles.button}
+      className={variant === 'default' ? loginButtonStyles.button : loginButtonStyles.primaryButton}
     >
       <span className={loginButtonStyles.label}>
         <span className={loginButtonStyles.icon}>
