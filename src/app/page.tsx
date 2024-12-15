@@ -1,10 +1,14 @@
 'use client';
 
+import { useState } from 'react';
 import Navbar from '@/components/Navbar';
 import ArrowButton from '@/components/base/Button/variants/ArrowButton';
+import SignupModal from '@/components/SignupModal';
 import { pageStyles } from './page.styles';
 
 export default function Home() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <>
       <Navbar />
@@ -86,6 +90,7 @@ export default function Home() {
               <ArrowButton 
                 styleType="primary"
                 className={pageStyles.cta.button}
+                onClick={() => setIsModalOpen(true)}
               >
                 Start your free trial
               </ArrowButton>
@@ -93,6 +98,11 @@ export default function Home() {
           </div>
         </main>
       </div>
+
+      <SignupModal 
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </>
   );
 }
