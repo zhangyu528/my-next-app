@@ -1,6 +1,6 @@
 export const inputStyles = {
   base: "appearance-none outline-none",
-  variants: {
+  appearances: {
     default: [
       "w-full px-4 py-2",
       "bg-gray-800",
@@ -38,4 +38,4 @@ export const inputStyles = {
     left: "absolute left-3 text-gray-400",
     right: "absolute right-3 text-gray-400"
   }
-} as const; 
+} as const;

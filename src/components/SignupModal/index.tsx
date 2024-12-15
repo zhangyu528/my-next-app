@@ -38,7 +38,7 @@ export default function SignupModal({ isOpen, onClose }: SignupModalProps) {
             <Input 
               type="email" 
               placeholder="Enter your email"
-              sizeVariant="md"
+              inputSize="md"
             />
           </div>
           

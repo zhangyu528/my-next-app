@@ -36,7 +36,7 @@ export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
             <Input 
               type="email" 
               placeholder="Email"
-              sizeVariant="md"
+              inputSize="md"
             />
           </div>
           
@@ -44,7 +44,7 @@ export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
             <Input 
               type="password" 
               placeholder="Password"
-              sizeVariant="md"
+              inputSize="md"
             />
           </div>
           

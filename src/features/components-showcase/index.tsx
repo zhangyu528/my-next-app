@@ -60,15 +60,15 @@ export default function ComponentsShowcase() {
             <h3 className={componentPageStyles.componentTitle}>Input Sizes:</h3>
             <div className="space-y-4 max-w-md">
               <Input 
-                sizeVariant="sm" 
+                inputSize="sm" 
                 placeholder="Small Input"
               />
               <Input 
-                sizeVariant="md" 
+                inputSize="md" 
                 placeholder="Medium Input"
               />
               <Input 
-                sizeVariant="lg" 
+                inputSize="lg" 
                 placeholder="Large Input"
               />
             </div>
@@ -112,4 +112,4 @@ export default function ComponentsShowcase() {
         </section>
       </div>
   );
-} 
+}

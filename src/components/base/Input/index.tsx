@@ -4,8 +4,8 @@ import { inputStyles } from '@/styles/theme/inputs';
 import { InputProps } from './types';
 
 export default function Input({
-  variant = 'default',
-  sizeVariant = 'md',
+  appearance = 'default',
+  inputSize = 'md',
   error,
   success,
   disabled,
@@ -13,8 +13,8 @@ export default function Input({
   ...props
 }: InputProps) {
   const baseStyle = inputStyles.base;
-  const variantStyle = inputStyles.variants[variant];
-  const sizeStyle = inputStyles.sizes[sizeVariant];
+  const appearanceStyle = inputStyles.appearances[appearance];
+  const sizeStyle = inputStyles.sizes[inputSize];
   const stateStyle = error 
     ? inputStyles.states.error 
     : success 
@@ -26,7 +26,7 @@ export default function Input({
     <input
       className={[
         baseStyle,
-        variantStyle,
+        appearanceStyle,
         sizeStyle,
         stateStyle,
         disabledStyle,
@@ -36,4 +36,4 @@ export default function Input({
       {...props}
     />
   );
-} 
+}
