@@ -3,6 +3,7 @@
 import { modalStyles } from './styles';
 import { SignupModalProps } from './types';
 import GithubIcon from '../icons/GithubIcon';
+import Input from '@/components/base/Input';
 
 export default function SignupModal({ isOpen, onClose }: SignupModalProps) {
   if (!isOpen) return null;
@@ -33,11 +34,11 @@ export default function SignupModal({ isOpen, onClose }: SignupModalProps) {
         
         <form className={modalStyles.form} onSubmit={(e) => e.preventDefault()}>
           <div>
-            <label className={modalStyles.formGroup.label}>Email</label>
-            <input 
+            <label className={modalStyles.label}>Email</label>
+            <Input 
               type="email" 
-              className={modalStyles.formGroup.input}
               placeholder="Enter your email"
+              sizeVariant="md"
             />
           </div>
           
@@ -51,4 +52,4 @@ export default function SignupModal({ isOpen, onClose }: SignupModalProps) {
       </div>
     </div>
   );
-} 
+}

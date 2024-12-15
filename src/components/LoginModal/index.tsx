@@ -4,6 +4,7 @@ import { modalStyles } from './styles';
 import { LoginModalProps } from './types';
 import GithubIcon from '../icons/GithubIcon';
 import ArrowButton from '@/components/base/ArrowButton';
+import Input from '@/components/base/Input';
 
 export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
   if (!isOpen) return null;
@@ -32,18 +33,18 @@ export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
         
         <form className={modalStyles.form} onSubmit={(e) => e.preventDefault()}>
           <div>
-            <input 
+            <Input 
               type="email" 
               placeholder="Email"
-              className={modalStyles.formGroup.input}
+              sizeVariant="md"
             />
           </div>
           
           <div>
-            <input 
+            <Input 
               type="password" 
               placeholder="Password"
-              className={modalStyles.formGroup.input}
+              sizeVariant="md"
             />
           </div>
           
@@ -59,4 +60,4 @@ export default function LoginModal({ isOpen, onClose }: LoginModalProps) {
       </div>
     </div>
   );
-} 
+}
