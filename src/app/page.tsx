@@ -26,6 +26,7 @@ export default function Home() {
               <ArrowButton 
                 styleType="primary"
                 className={pageStyles.hero.button}
+                onClick={() => setIsModalOpen(true)}
               >
                 Get started for free
               </ArrowButton>
