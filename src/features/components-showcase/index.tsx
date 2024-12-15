@@ -45,21 +45,12 @@ export default function ComponentsShowcase() {
         <section className={componentPageStyles.section}>
           <h2 className={componentPageStyles.sectionTitle}>Inputs</h2>
           
-          {/* Input Variants */}
+          {/* Input Default */}
           <div className="mb-8">
-            <h3 className={componentPageStyles.componentTitle}>Input Variants:</h3>
-            <div className="space-y-4 max-w-md [&>*]:!border-inherit">
+            <h3 className={componentPageStyles.componentTitle}>Default Input:</h3>
+            <div className="space-y-4 max-w-md">
               <Input 
-                variant="default" 
                 placeholder="Default Input"
-              />
-              <Input 
-                variant="search" 
-                placeholder="Search Input"
-              />
-              <Input 
-                variant="minimal" 
-                placeholder="Minimal Input"
               />
             </div>
           </div>
