@@ -23,4 +23,4 @@ export const arrowButtonStyles = {
     "group-hover:translate-x-2",
     "flex items-center"
   ].join(" ")
-} as const; 
+} as const;

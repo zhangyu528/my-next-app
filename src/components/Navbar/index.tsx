@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { navStyles } from './styles';
 import LoginModal from '../LoginModal';
 import SignupModal from '../SignupModal';
-import ArrowButton from '@/components/base/ArrowButton';
+import ArrowButton from '@/components/base/Button/variants/ArrowButton';
 
 export default function Navbar({ 
   logo = "Next App"
@@ -44,4 +44,4 @@ export default function Navbar({
       />
     </>
   );
-} 
+}

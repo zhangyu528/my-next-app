@@ -3,7 +3,7 @@
 import { modalStyles } from './styles';
 import { LoginModalProps } from './types';
 import GithubIcon from '../icons/GithubIcon';
-import ArrowButton from '@/components/base/ArrowButton';
+import ArrowButton from '@/components/base/Button/variants/ArrowButton';
 import Input from '@/components/base/Input';
 
 export default function LoginModal({ isOpen, onClose }: LoginModalProps) {

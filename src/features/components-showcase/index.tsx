@@ -1,6 +1,6 @@
 'use client';
 
-import ArrowButton from '@/components/base/ArrowButton';
+import ArrowButton from '@/components/base/Button/variants/ArrowButton';
 import Button from '@/components/base/Button';
 import Input from '@/components/base/Input';
 import { componentPageStyles } from './styles';

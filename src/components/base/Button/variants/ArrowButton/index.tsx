@@ -1,6 +1,6 @@
 'use client';
 
-import Button from '../Button';
+import Button from '../../index';
 import ArrowIcon from '@/components/icons/ArrowIcon';
 import { arrowButtonStyles } from './styles';
 import { ArrowButtonProps } from './types';
@@ -30,4 +30,4 @@ export default function ArrowButton({
       </span>
     </Button>
   );
-} 
+}
