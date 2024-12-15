@@ -42,7 +42,11 @@ export const pageStyles = {
 
     button: [
       "text-lg",
-      "!bg-gradient-to-r !from-blue-500 !to-purple-600",
+      "!bg-gradient-to-r !from-gray-900 !to-gray-800",
+      "!border !border-gray-700",
+      "!hover:from-gray-800 !hover:to-gray-700",
+      "!hover:border-gray-600",
+      "!shadow-lg !shadow-black/30",
       "transition-all duration-300"
     ].join(" ")
   },
