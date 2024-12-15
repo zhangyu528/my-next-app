@@ -5,6 +5,7 @@ export interface NavItem {
 }
 
 export interface NavbarProps {
+  /** @deprecated Use LogoIcon instead */
   logo?: string;
   items?: NavItem[];
-} 
+}

@@ -5,6 +5,7 @@ import { navStyles } from './styles';
 import LoginModal from '../LoginModal';
 import SignupModal from '../SignupModal';
 import ArrowButton from '@/components/base/Button/variants/ArrowButton';
+import LogoIcon from '../icons/LogoIcon';
 
 export default function Navbar({ 
   logo = "Next App"
@@ -16,7 +17,9 @@ export default function Navbar({
     <>
       <nav className={navStyles.nav}>
         <div className={navStyles.container}>
-          <div className={navStyles.logo}>{logo}</div>
+          <div className={navStyles.logo}>
+            <LogoIcon />
+          </div>
           <div className={navStyles.itemsWrapper}>
             <ArrowButton 
               onClick={() => setIsLoginModalOpen(true)} 
