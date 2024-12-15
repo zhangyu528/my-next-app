@@ -1,12 +1,12 @@
 export default function LogoIcon() {
   return (
     <svg 
-      width="32" 
-      height="32" 
+      width="40" 
+      height="40" 
       viewBox="0 0 512 512" 
       fill="none" 
       xmlns="http://www.w3.org/2000/svg"
-      className="transition-transform hover:scale-110"
+      className="transition-transform duration-200 hover:scale-110"
     >
       <rect width="512" height="512" rx="256" fill="url(#paint0_linear)"/>
       <path d="M355.432 161H156.568C146.958 161 139 168.958 139 178.568V333.432C139 343.042 146.958 351 156.568 351H355.432C365.042 351 373 343.042 373 333.432V178.568C373 168.958 365.042 161 355.432 161Z" stroke="white" strokeWidth="12"/>
