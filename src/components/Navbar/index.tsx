@@ -8,7 +8,6 @@ import ArrowButton from '@/components/base/Button/variants/ArrowButton';
 import LogoIcon from '../icons/LogoIcon';
 
 export default function Navbar({ 
-  logo = "Next App"
 }) {
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const [isSignupModalOpen, setIsSignupModalOpen] = useState(false);
