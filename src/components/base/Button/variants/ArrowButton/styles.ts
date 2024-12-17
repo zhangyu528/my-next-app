@@ -1,5 +1,6 @@
 export const arrowButtonStyles = {
   wrapper: [
+    "group",
     "relative",
     "overflow-hidden",
     "hover:rounded-none",

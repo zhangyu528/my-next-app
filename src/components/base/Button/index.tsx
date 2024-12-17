@@ -1,6 +1,6 @@
 'use client';
 
-import { buttonStyles } from '@/styles/theme/buttons';
+import { buttonVariants } from '@/styles/theme/buttons';
 import { ButtonProps } from './types';
 
 export default function Button({ 
@@ -14,7 +14,7 @@ export default function Button({
     <button
       onClick={onClick}
       className={[
-        buttonStyles[styleType],
+        buttonVariants[styleType],
         className
       ].filter(Boolean).join(' ')}
       {...props}

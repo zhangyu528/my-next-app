@@ -17,10 +17,15 @@ export default function ComponentsShowcase() {
         {/* Basic Buttons */}
         <div className="mb-8">
           <h3 className={componentPageStyles.componentTitle}>Basic Buttons:</h3>
-          <div className="flex gap-4">
+          <div className="flex gap-4 items-center mb-4">
             <Button styleType="default">Default Button</Button>
             <Button styleType="primary">Primary Button</Button>
             <Button styleType="outline">Outline Button</Button>
+          </div>
+          <div className="flex gap-4 items-center">
+            <Button styleType="default" disabled>Disabled Default</Button>
+            <Button styleType="primary" disabled>Disabled Primary</Button>
+            <Button styleType="outline" disabled>Disabled Outline</Button>
           </div>
         </div>
 
